@@ -5,10 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="stylesheet" href="./css/estilos.css">
   </head>
 <body>
   <header id="header">
@@ -38,7 +35,7 @@
 
         <div class="mb-3">
             <label for="fechanac">Fecha de Nacimiento</label>
-            <input type="number" name="fechanac" id="fechanac" v-model="fechanac">
+            <input type="date" name="fechanac" id="fechanac" v-model="fechanac">
           </div>
           <div class="mb-3">
             <label for="movil">Movil</label>
@@ -59,13 +56,8 @@
           <div class="mb-3">
             <label for="rol">ROL</label>
             <input type="text" name="rol"id="rol" v-model="rol">
-          </div>
-
-
-
-          
-          
-    <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
+          </div>     
+           <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
         </form>
       </div>
     </main>

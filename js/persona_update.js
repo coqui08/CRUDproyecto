@@ -18,7 +18,7 @@ const { createApp } = Vue
         usuario:"",
         rol:"",
         clave:"",
-        url:' https://scastillo.pythonanywhere.com/personas/' + id_persona
+        url:' https://scastillo.pythonanywhere.com/personas/' + id
        }  
     },
     methods: {

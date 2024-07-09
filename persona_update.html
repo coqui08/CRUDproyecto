@@ -24,7 +24,7 @@
               <div class="mb-3">
                   <label for="imagen">foto</label>
                   <input type="text" name="foto" id="foto" v-model="foto" />
-                  <img width="100" :src="imagen" alt="" />
+                  <img width="100" :src="foto" alt="foto" />
               </div>
               <div class="mb-3">
                 <label for="nombre">Nombre</label>
@@ -42,19 +42,19 @@
 
             <div class="mb-3">
               <label for="fechanac">Fecha de Nacimiento</label>
-              <input type="number"name="fechanac"id="fechanac"v-model="fechanac"/>
+              <input type="date"name="fechanac"id="fechanac"v-model="fechanac"/>
             </div>
             <div class="mb-3">
               <label for="movil">Movil</label>
-              <input type="text" name="movil" id="movil" v-model="movil" />
+              <input type="number" name="movil" id="movil" v-model="movil" />
             </div>
             <div class="mb-3">
               <label for="genero">Género</label>
               <input type="text" name="genero" id="genero" v-model="genero" />
             </div>
             <div class="mb-3">
-              <label for="ususario">USUARIO</label>
-              <input type="text"name="ususario"id="ususario"v-model="ususario"/>
+              <label for="usuario">USUARIO</label>
+              <input type="text"name="usuario"id="usuario"v-model="usuario"/>
             </div>
             <div class="mb-3">
               <label for="clave">CLAVE</label>

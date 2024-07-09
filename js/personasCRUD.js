@@ -7,11 +7,18 @@ createApp({
       error: false,
       cargando: true,
       /*atributos para el guardar los valores del formulario */
-      id:0,
+      
       id_persona: 0,
-      id_pet:0,
-      fechadop: 0,
-      observacion: "",
+      foto:"",
+      nombre: "",
+      apellido: "",
+      mail:"",
+      fechanac:0,
+      movi:"0",
+      genero:"",
+      usuario:"",
+      clave:"",
+      rol:"",
     }
   },
 
@@ -43,10 +50,9 @@ createApp({
     },
     grabar() {
         let persona = {
-            
+            foto:this.foto,
             nombre:this.nombre,
             apellido:this.apellido,
-            foto:this.foto,
             mail:this.mail,
             fechanac:this.fechanac,
             movil:this.movil,
