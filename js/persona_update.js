@@ -10,15 +10,15 @@ const { createApp } = Vue
         id_persona:0,
         foto:"",
         nombre:"",
-        apellido:0,
+        apellido:"",
         mail:"",
-        fechanac:0,
-        movil:0,
+        fechanac:"",
+        movil:"",
         genero:"",
         usuario:"",
         rol:"",
         clave:"",
-        url:' https://scastillo.pythonanywhere.com/personas/' + id
+        url:'https://scastillo.pythonanywhere.com/personas' + id
        }  
     },
     methods: {
@@ -40,7 +40,7 @@ const { createApp } = Vue
                     this.rol=data.rol                
                 })
                 .catch(err => {
-                    console.error(err);
+                    console.error(err)
                     this.error=true              
                 })
         },
@@ -57,6 +57,7 @@ const { createApp } = Vue
                 rol:this.rol
              
             }
+            console.log ("muestre la persona: " + persona);
             var options = {
                 body: JSON.stringify(persona),
                 method: 'PUT',
@@ -65,8 +66,9 @@ const { createApp } = Vue
             }
             fetch(this.url, options)
                 .then(function () {
-                    alert("Registro modificado")
-                    window.location.href = "./personasCRUD.html"; // navega a productos.html          
+                    alert("Registro modificado"),
+                    console.log (persona),
+                    window.location.href = "./personasCRUD.html" // navega a productos.html          
                 })
                 .catch(err => {
                     console.error(err);
@@ -75,6 +77,7 @@ const { createApp } = Vue
         }
     },
     created() {
+        
         this.fetchData(this.url)
     },
   }).mount('#app')
