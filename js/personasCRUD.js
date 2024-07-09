@@ -7,16 +7,11 @@ createApp({
       error: false,
       cargando: true,
       /*atributos para el guardar los valores del formulario */
+      id:0,
       id_persona: 0,
-      foto: "",
-      nombre: "",
-      apellido: "",
-      mail: "",
-      fechanac: 0,
-      genero: "",
-      usuario: "",
-      clave: "",
-      rol: "",
+      id_pet:0,
+      fechadop: 0,
+      observacion: "",
     }
   },
 

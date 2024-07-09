@@ -3,40 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css" />
     <title>adopcionCRUD</title>
   </head>
   <body>
     <header></header>
     <main>
-      <h1>Crud adopción</h1>
-      <a href="" class="">Nuevo</a>
-
-      <div class="">
-        <table class="">
-          <thead>
-            <tr>
-              <th scope="col">id</th>
-              <th scope="col">id_persona</th>
-              <th scope="col">id_pet</th>
-              <th scope="col">fecha adopcion</th>
-              <th scope="col">observacion</th>
-              <th scope="col">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr class="">
-                <td scope="row">R1C1</td>
-                <td></td>
-                <td></td>
+      <div id="app" class="container">
+        <h1>Crud adopción</h1>
+        <a href="adopcion_nuevo.html"class="boton_crud" class="">Nuevo</a>
+        <div class="">
+          <table class="">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">id_persona</th>
+                <th scope="col">id_pet</th>
+                <th scope="col">fecha adopcion</th>
+                <th scope="col">observacion</th>
+                <th scope="col">Acciones</th>
               </tr>
-            
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <tr class="" v-for="adoptante in adoptantes">
+                <td scope="row">{{adoptante.id}}</td>
+                <td>{{adoptante.id_persona}}</td>
+                <td>{{adoptante.id_pet}}</td>
+                <td>{{adoptante.fechadop}}</td>
+                <td>{{adoptante.observacion}}</td>
+                <td>
+                  <a class="" :href="'producto_update.html?id='+ producto.id" >Editar</a>
+                  <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
     <footer>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
       <script src="./js/adopcionCRUD.js"></script>
     </footer>
   </body>
