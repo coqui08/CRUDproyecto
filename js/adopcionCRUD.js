@@ -3,8 +3,6 @@ const { createApp } = Vue
     data() {
       return {
         adopciones:[],
-        //url:'http://localhost:5000/productos', 
-   // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
         url:'https://scastillo.pythonanywhere.com/adopcion',   // si ya lo subieron a pythonanywhere
         error:false,
         cargando:true,
@@ -13,7 +11,7 @@ const { createApp } = Vue
         id_persona:0,
         id_pet:0,
         fechadop:0, 
-        observacion:"",
+        observacion:""
     }  
     },
 

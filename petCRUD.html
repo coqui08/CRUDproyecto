@@ -5,14 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"/>
+    
 </head>
 <body>
-    <header id="header">
+    <header id="item header">
         <!-- place navbar here -->
     </header>
     <main>
         <div id="app" class="container">
+            <sectionsection class="banner" id="adopcion">
             <h1>Pet CRUD</h1>
+            </section>
             <br>
             <a  class="boton_crud" href="pet_nuevo.html">Nuevo</a>
             <br><br>
@@ -25,8 +29,9 @@
                     <p>Cargando .....</p>
                 </section>
                 <section v-else>-->
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
+                    <section class="tabla">
+                      <div class="container_crud">
+                        <table class="">
                             <thead>
                                 <tr>
                                     <th scope="col">Id Pet</th>
@@ -56,8 +61,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </section>
+                     </div>
+                   </section>
             </div>
         </div>
     </main>
@@ -67,5 +72,6 @@
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
     <script src="./js/petCRUD.js"></script>
+    <script src="./js/script_sinfooter.js"></script>
 </body>
 </html>
