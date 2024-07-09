@@ -19,12 +19,12 @@
              <input type="number" name="id" id="id" disabled v-model="id" >
             </div>
             <div class="mb-3">
-                <label for="id">Id persona</label>
-              <input type="number" name="id" id="id" disabled v-model="id" >
+                <label for="id_persona">Id persona</label>
+              <input type="number" name="id_persona" id="id_persona" disabled v-model="id" >
              </div>
              <div class="mb-3">
-                <label for="id">Id pet</label>
-              <input type="number" name="id" id="id" disabled v-model="id" >
+                <label for="id_pet">Id pet</label>
+              <input type="number" name="id_pet" id="id_pet" disabled v-model="id_pet" >
              </div>
           <div class="mb-3">
             <label for="fechadop">Fecha adopción</label>
@@ -34,9 +34,7 @@
             <label for="observacion">Observación</label>
             <input type="text" name="observacion"id="observacion" v-model="observacion">
           </div>
-       
-         
-            <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+          <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
         
         </form>
 
