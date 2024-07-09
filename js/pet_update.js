@@ -12,7 +12,7 @@ const { createApp } = Vue
         genero:"",
         especie:"",
         castrado:"",
-        url:'https://scastillo.pythonanywhere.com/pet'+ id
+        url:'https://scastillo.pythonanywhere.com/pet/'+ id
        }  
     },
     methods: {
