@@ -10,7 +10,7 @@ const { createApp } = Vue
         id_pet:0,
         fechadop:0,
         observacion:"",
-        url:'http://scastillo.pythonanywhere.com/adopcion/'+id,
+        url:'https://scastillo.pythonanywhere.com/adopcion/'+id,
        }  
     },
     methods: {
