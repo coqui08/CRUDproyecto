@@ -2,7 +2,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        adoptantes:[],
+        adopciones:[],
         //url:'http://localhost:5000/productos', 
    // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
         url:'https://scastillo.pythonanywhere.com/adopcion',   // si ya lo subieron a pythonanywhere
@@ -22,7 +22,7 @@ const { createApp } = Vue
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.adoptantes = data;
+                    this.adopciones = data;
                     this.cargando=false
                 })
                 .catch(err => {
@@ -38,12 +38,12 @@ const { createApp } = Vue
             fetch(url, options)
                 .then(res => res.text()) // or res.json()
                 .then(res => {
-			 alert('Registro Eliminado')
+			        alert('Registro Eliminado')
                     location.reload(); // recarga el json luego de eliminado el registro
                 })
         },
         grabar(){
-            let adoptante = {
+            let adopcion = {
                 id:this.id,
                 id_persona: this.id_persona,
                 id_pet: this.id_pet,
@@ -51,7 +51,7 @@ const { createApp } = Vue
                 observacion:this.observacion
             }
             var options = {
-                body:JSON.stringify(adoptante),
+                body:JSON.stringify(adopcion),
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'

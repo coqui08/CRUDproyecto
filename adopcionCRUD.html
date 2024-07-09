@@ -25,12 +25,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="" v-for="adoptante in adoptantes">
-                <td scope="row">{{adoptante.id}}</td>
-                <td>{{adoptante.id_persona}}</td>
-                <td>{{adoptante.id_pet}}</td>
-                <td>{{adoptante.fechadop}}</td>
-                <td>{{adoptante.observacion}}</td>
+              <tr class="" v-for="adopcion in adopciones">
+                <td scope="row">{{adopcion.id}}</td>
+                <td>{{adopcion.id_persona}}</td>
+                <td>{{adopcion.id_pet}}</td>
+                <td>{{adopcion.fechadop}}</td>
+                <td>{{adopcion.observacion}}</td>
                 <td>
                   <a class="" :href="'adopcion_update.html?id='+ adopcion.id" >Editar</a>
                   <button type="button" class="btn btn-danger" v-on:click="eliminar(adopcion.id)" >Eliminar</button>
